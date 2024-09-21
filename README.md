@@ -1,0 +1,1 @@
+This is the first challenge exercise i got from my tutor of DENTED CODE to make portfolio of mine using just simple HTML and  CSS.
