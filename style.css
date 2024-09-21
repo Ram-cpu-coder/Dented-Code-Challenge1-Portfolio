@@ -1,12 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 23px;
 }
 
 body {
     background: rgb(243, 235, 235);
-
+    /* overflow: hidden; */
 }
 
 button {
@@ -28,13 +27,14 @@ h1 {
 
 /* -----------------------------------------main-info--------------------------------- */
 .main-info {
-    /* border: 2px solid red; */
+    border: 2px solid blue;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: auto;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5px;
 
     h1,
     p {
@@ -60,87 +60,48 @@ h1 {
 }
 
 /* --------------------------------------------skills------------------------------------------------------- */
-.skills {
-    border: 2px solid red ;
-    width: 20%;
-
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    /* border: 1px double black; */
-    border-radius: 80px 20px;
-    min-width: 190px;
-    .hr {
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: center;
-        width: 98vw;
-    }
-    hr{
-        width: 60px;
-        margin: 10px 0;
-    }
-
-    ul {
-        text-align: start;
-        margin-left: 40px;
-    }
-}
-
-/* 
-----------------------------------------------projects----------------------------------------------------- */
 #skills-projects{
-    height: 800px;
-    
-    border: 2px solid blue;
-}
-.projects {
-    /* border: 2px solid red ; */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    height: 90vh;
-    margin: auto;
-    margin-top: 40px;
-    /* flex-wrap: wrap; */
-
-    h1 {
-        display: flex;
-        width: 98vw;
-        justify-content: center;
-        /* flex-wrap: wrap; */
-        margin: 10px 0;
-    }
-
-    .hr {
-        width: 98vw;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center
-    }
-    hr{
-        width: 5vw;
-    }
    
-
-    table,
-    tr,
-    th, td {
-        border: 2px double black;
-        font-weight: lighter;
-        text-align: start;
-        
-    }
-
-    h3 {
-        text-align: center;
-    }
+    justify-content: center;
+    
+    width: auto;
+    height: auto;
+    padding: 20px 25px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid red;
+}
+.skills h1{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    display: flex;
+    justify-content: center;
+}
+.skills ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.skills ul li{
+    list-style: none;
 }
 
+#table, tr, th, td{
+    border: 1px solid black;  
+    border-collapse: collapse;
+}
+#table, th, td{
+    padding: 10px 15px;
+}
+
+
+.projects{
+    overflow-x: scroll;
+    width: 100%;
+}
 
 /* -----------------------------------------contact------------------------------------------------------ */
 
@@ -190,13 +151,25 @@ form {
 
 /* --------------------------------------------------------------media query------------------------------------------------------------------- */
 
-@media only screen and (max-width: 485px){
+/* @media (max-width: 485px){
     #skills-projects {
         height: 1190px;
     }
 }
-@media only screen and (max-width: 652px){
+@media (max-width: 652px){
     #skills-projects {
-        height: 900px;
+        background: red;
+        height: auto;
     }
-}
+
+    .main-info{
+        height: auto;
+    }
+} */
+ @media only screen and (max-width: 460px){
+    #skills-projects{
+        overflow-x: scroll;
+        
+    }
+   
+ }
