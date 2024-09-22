@@ -27,14 +27,15 @@ h1 {
 
 /* -----------------------------------------main-info--------------------------------- */
 .main-info {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 100vh;
-    justify-content: center;
+    height: 80vh;
+    /* justify-content: center; */
     align-items: center;
-    margin-bottom: 5px;
+    padding-top: 100px;
+
 
     h1,
     p {
@@ -44,8 +45,8 @@ h1 {
 
     img {
         border-radius: 50%;
-        height: 250px;
-        width: 250px;
+        height: 350px;
+        width: 350px;
     }
 
     #description {
@@ -56,51 +57,92 @@ h1 {
 
 #resume {
     width: 210px;
-    margin-bottom: 40px;
+    margin: 40px 0;
 }
 
 /* --------------------------------------------skills------------------------------------------------------- */
-#skills-projects{
+#skills-projects {
     display: flex;
     flex-direction: column;
-   
     justify-content: center;
-    
     width: auto;
     height: auto;
-    padding: 20px 25px;
+    padding: 0 25px;
+    margin-bottom: 50px;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
-.skills h1{
-    font-size: 22px;
+
+.skills {
+    border: 1px double black;
+    border-radius: 80px 20px;
+    width: 15%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* padding: 15px 0;
+    margin: 30px 0; */
+}
+
+.skills h1 {
+    font-size: 30px;
     font-weight: bold;
     letter-spacing: 6px;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
-.skills ul{
+
+.skills ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
-}
-.skills ul li{
-    list-style: none;
+    align-items: center;
 }
 
-#table, tr, th, td{
-    border: 1px solid black;  
+.skills ul li {
+    list-style: none;
+    padding-top: 10px;
+}
+
+#table,
+tr,
+th,
+td {
+    border: 1px solid black;
     border-collapse: collapse;
 }
-#table, th, td{
+
+#table,
+th,
+td {
     padding: 10px 15px;
 }
 
 
-.projects{
+.projects {
     overflow-x: scroll;
+    scrollbar-color: black;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 10px 10px;
+    padding: 0 10px;
+    /* border: 2px solid red; */
+}
+.projects::-webkit-scrollbar{
+  /* width: 100px; */
+}
+
+#skills-projects>h1 {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 6px;
+    /* border: 2px solid blue; */
 }
 
 /* -----------------------------------------contact------------------------------------------------------ */
@@ -118,6 +160,10 @@ h1 {
     /* flex-wrap: wrap; */
 }
 
+.contact h1 {
+    letter-spacing: 6px;
+}
+
 .contact p {
     margin: 10px 0;
 }
@@ -131,16 +177,35 @@ form {
     margin-top: 10px;
 }
 
-.TextArea{
+.TextArea {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.button{
+.full-name {
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+/* .email-address{
+    width: 300px;
+} */
+#email {
+    width: 300px;
+
+}
+
+/* -------------------------------------button------------------------------------------ */
+.button {
+    height: 80px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
 #button-submit {
     height: 30px;
     width: 90px;
@@ -151,25 +216,37 @@ form {
 
 /* --------------------------------------------------------------media query------------------------------------------------------------------- */
 
-/* @media (max-width: 485px){
-    #skills-projects {
-        height: 1190px;
+@media screen and (max-width: 1090px){
+   .skills{
+       width: 150px;
     }
-}
-@media (max-width: 652px){
-    #skills-projects {
-        background: red;
-        height: auto;
+} 
+@media screen and (max-width: 360px){
+    .main-info{
+        /* background-color: red; */
+        height: 850px;
+
+        #header, #phone{
+           text-align: center;
+        }
     }
 
-    .main-info{
-        height: auto;
+}
+@media screen and (max-width: 390px) {
+
+    .full-name,
+    .email-address,
+    .phone,
+    .date-of-birth,
+    .linkedin-profile,
+    .TextArea {
+        /* border: 2px solid red; */
+        width: 250px;
+        display: flex;
+        flex-direction: column;
     }
-} */
- @media only screen and (max-width: 460px){
-    #skills-projects{
-        overflow-x: scroll;
-        
+    #email{
+        width: 260px;
     }
-   
- }
+
+}
